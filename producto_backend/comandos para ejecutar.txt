@@ -1,2 +1,0 @@
-abrirlo en spring tools suite
-clic dereche run spring tool suite 

@@ -1,11 +1,9 @@
-package com.producto.dao;
+package com.empresaproductos.models.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
-import com.producto.entity.Producto;
+import com.empresaproductos.models.entity.Producto;
 
-@Repository
 public interface IProductoDao extends JpaRepository<Producto, Integer>{
 
 }

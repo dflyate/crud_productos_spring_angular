@@ -1,3 +1,0 @@
-node v 16.20.2
-npm install 
-ng s -o

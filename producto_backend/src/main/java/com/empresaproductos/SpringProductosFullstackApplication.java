@@ -1,13 +1,13 @@
-package com.producto;
+package com.empresaproductos;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProductoBackendApplication {
+public class SpringProductosFullstackApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProductoBackendApplication.class, args);
+		SpringApplication.run(SpringProductosFullstackApplication.class, args);
 	}
 
 }

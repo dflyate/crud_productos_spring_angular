@@ -1,13 +1,15 @@
-package com.producto.service;
+package com.empresaproductos.models.services;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.producto.dao.IProductoDao;
-import com.producto.entity.Producto;
+import com.empresaproductos.models.dao.IProductoDao;
+import com.empresaproductos.models.entity.Producto;
 
 @Service
 public class ProductoServiceImpl implements IProductoService{
@@ -15,32 +17,39 @@ public class ProductoServiceImpl implements IProductoService{
 	@Autowired
 	private IProductoDao productoDao;
 
-	@Transactional(readOnly = true)
 	@Override
+	@Transactional(readOnly = true)
 	public List<Producto> findAll() {
 		// TODO Auto-generated method stub
 		return productoDao.findAll();
 	}
 
-	@Transactional(readOnly = true)
 	@Override
-	public Producto findById(Integer id) {
+	@Transactional(readOnly = true)
+	public Page<Producto> findAll(Pageable pageable) {
+		// TODO Auto-generated method stub
+		return productoDao.findAll(pageable);
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public Producto findBy(Integer id) {
 		// TODO Auto-generated method stub
 		return productoDao.findById(id).orElse(null);
 	}
 
-	@Transactional()
 	@Override
+	@Transactional
 	public Producto save(Producto producto) {
 		// TODO Auto-generated method stub
 		return productoDao.save(producto);
 	}
 
-	@Transactional()
 	@Override
-	public void deleteById(Integer idproducto) {
-		// TODO Auto-generated method stub
-		productoDao.deleteById(idproducto);
+	@Transactional
+	public void delete(Integer id) {
+		productoDao.deleteById(id);
+		
 	}
 
 }
