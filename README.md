@@ -7,7 +7,7 @@ Aplicación web full stack para manejo de productos con Spring y Angular
 ## Tecnologías utilizadas
 
 - **Frontend:** Angular 12.2.0, Node 20.11.1
-- **Backend:** Spring 3.0.6, JDK 17
+- **Backend:** Spring 3.0.6, JDK 17, Maven 3.8.6
 - **Base de datos:** MySQL 8.0
 
 ---
